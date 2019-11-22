@@ -34,7 +34,7 @@ body {
 .card {
 	display: grid;
 	grid-row-gap: 3rem;
-	grid-template-columns: minmax(375px, 750px);
+	grid-template-columns: minmax(200px, 750px);
 	grid-template-rows: repeat(3, auto);
 	grid-template-areas: "myHeader" "minicards" "myFooter";
 	h1 {
