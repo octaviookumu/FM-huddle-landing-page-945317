@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+  place-items: center;
+  font-size: 18px; }
+
+.card {
+  display: grid;
+  grid-row-gap: 3rem;
+  grid-template-columns: minmax(375px, 750px);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "myHeader" "minicards" "myFooter"; }
+  .card h1 {
+    font-family: 'Poppins', sans-serif; }
+  .card h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #00252e; }
+  .card header {
+    background: url("/images/bg-hero-mobile.svg");
+    background-color: #ebfbff;
+    grid-area: myHeader;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 2rem;
+    grid-template-areas: "huddle-img btn" "huddle-msg huddle-msg" "content-img content-img"; }
+    .card header .huddle-img {
+      grid-area: huddle-img;
+      margin-top: 1rem;
+      margin-left: 7%;
+      width: 60%; }
+      .card header .huddle-img img {
+        width: 100%;
+        height: 100%; }
+    .card header .btn {
+      grid-area: btn;
+      margin-top: 1rem;
+      margin-right: 7%;
+      display: flex;
+      justify-content: flex-end; }
+      .card header .btn button {
+        background: #fff;
+        padding: .3rem 1.8rem;
+        color: #00252e;
+        font-weight: 800;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        box-shadow: 2px -2px 15px 2px rgba(0, 0, 0, 0.37); }
+        .card header .btn button:hover {
+          cursor: pointer;
+          color: #ff52bf;
+          border: 2px solid #ff52bf;
+          background: #ebfbff; }
+    .card header .huddle-msg {
+      grid-area: huddle-msg;
+      margin-left: 4%;
+      margin-right: 4%;
+      display: grid;
+      place-items: center; }
+      .card header .huddle-msg h1 {
+        text-align: center;
+        font-size: 1.5rem; }
+      .card header .huddle-msg p {
+        text-align: center;
+        color: #00252e; }
+      .card header .huddle-msg button {
+        padding: .8rem 4rem;
+        background: #ff52bf;
+        color: #fff;
+        border-radius: 1.2rem;
+        outline: none;
+        border: none; }
+        .card header .huddle-msg button:hover {
+          cursor: pointer;
+          color: #00252e;
+          border: 2px solid #00252e;
+          background: #ebfbff; }
+    .card header .content-img {
+      grid-area: content-img;
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-bottom: 1.5rem; }
+      .card header .content-img img {
+        width: 100%;
+        height: 100%; }
+  .card .minicards {
+    grid-area: minicards;
+    margin-left: 7%;
+    margin-right: 7%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "minicard-1-img" "minicard-1" "minicard-2-img" "minicard-2" "minicard-3-img" "minicard-3"; }
+    .card .minicards p {
+      color: #808d99; }
+    .card .minicards .minicard-1 {
+      grid-area: minicard-1;
+      border-bottom-right-radius: .8rem;
+      border-bottom-left-radius: .8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: -1px 14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-1 p {
+        margin-left: 5%;
+        margin-right: 5%; }
+    .card .minicards .minicard-1-img {
+      grid-area: minicard-1-img;
+      border-top-right-radius: .8rem;
+      border-top-left-radius: .8rem;
+      box-shadow: -1px -14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-1-img img {
+        display: block;
+        margin: 1.5rem auto;
+        width: 70%;
+        height: 70%; }
+    .card .minicards .minicard-2 {
+      grid-area: minicard-2;
+      border-bottom-right-radius: .8rem;
+      border-bottom-left-radius: .8rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: -1px 14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-2 p {
+        margin-left: 5%;
+        margin-right: 5%; }
+    .card .minicards .minicard-2-img {
+      grid-area: minicard-2-img;
+      border-top-right-radius: .8rem;
+      border-top-left-radius: .8rem;
+      box-shadow: -1px -14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-2-img img {
+        display: block;
+        margin: 1.5rem auto;
+        width: 70%;
+        height: 70%; }
+    .card .minicards .minicard-3 {
+      grid-area: minicard-3;
+      border-bottom-right-radius: .8rem;
+      border-bottom-left-radius: .8rem;
+      text-align: center;
+      box-shadow: -1px 14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-3 p {
+        margin-left: 5%;
+        margin-right: 5%; }
+    .card .minicards .minicard-3-img {
+      grid-area: minicard-3-img;
+      border-top-right-radius: .8rem;
+      border-top-left-radius: .8rem;
+      box-shadow: -1px -14px 18px -13px rgba(0, 0, 0, 0.37); }
+      .card .minicards .minicard-3-img img {
+        display: block;
+        margin: 1.5rem auto;
+        width: 70%;
+        height: 70%; }
+  .card footer {
+    grid-area: myFooter;
+    position: relative; }
+    .card footer .footer-card-1 {
+      background: #fff;
+      position: absolute;
+      z-index: 1;
+      border-radius: .8rem;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      display: grid;
+      place-items: center;
+      box-shadow: -2px -2px 18px -8px rgba(0, 0, 0, 0.37); }
+      .card footer .footer-card-1 h2 {
+        text-align: center; }
+      .card footer .footer-card-1 button {
+        padding: .8rem 3rem;
+        background: #ff52bf;
+        color: #fff;
+        margin-bottom: 2rem;
+        border-radius: 1.2rem;
+        outline: none;
+        border: none; }
+        .card footer .footer-card-1 button:hover {
+          cursor: pointer;
+          color: #00252e;
+          border: 2px solid #00252e;
+          background: #fff; }
+    .card footer .footer-card-2 {
+      position: relative;
+      z-index: -1;
+      margin-top: 6rem;
+      padding-top: 10rem;
+      background: #00252e;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "footer-contact" "footer-about" "footer-stuff"; }
+      .card footer .footer-card-2 p {
+        color: #ebfbff; }
+      .card footer .footer-card-2 .footer-contact {
+        grid-area: footer-contact; }
+        .card footer .footer-card-2 .footer-contact .footer-contact-img {
+          width: 50%; }
+          .card footer .footer-card-2 .footer-contact .footer-contact-img img {
+            width: 100%;
+            height: 100%;
+            filter: brightness(0) invert(1); }
+        .card footer .footer-card-2 .footer-contact .icon-location {
+          margin-top: 1rem;
+          color: #ebfbff;
+          display: flex; }
+          .card footer .footer-card-2 .footer-contact .icon-location div {
+            margin-top: 1.2rem;
+            margin-left: 1rem;
+            width: 20%; }
+        .card footer .footer-card-2 .footer-contact .icon-phone {
+          display: flex;
+          align-items: center;
+          margin-left: 1rem; }
+          .card footer .footer-card-2 .footer-contact .icon-phone img {
+            margin-right: .6rem; }
+        .card footer .footer-card-2 .footer-contact .icon-email {
+          display: flex;
+          align-items: center;
+          margin-left: 1rem; }
+          .card footer .footer-card-2 .footer-contact .icon-email img {
+            margin-right: .6rem; }
+      .card footer .footer-card-2 .footer-about {
+        color: #ebfbff; }
+        .card footer .footer-card-2 .footer-about .list-1 {
+          padding-left: 1rem;
+          list-style: none;
+          line-height: 1.8rem; }
+        .card footer .footer-card-2 .footer-about .list-2 {
+          padding-left: 1rem;
+          list-style: none;
+          line-height: 1.8rem; }
+      .card footer .footer-card-2 .footer-stuff {
+        grid-area: footer-stuff;
+        position: relative; }
+        .card footer .footer-card-2 .footer-stuff .icons {
+          margin: 1rem 35%;
+          display: flex;
+          width: 30%;
+          place-items: center; }
+          .card footer .footer-card-2 .footer-stuff .icons i {
+            border: 0.5px solid #ebfbff;
+            color: #ebfbff;
+            padding: .4rem;
+            border-radius: 50%; }
+            .card footer .footer-card-2 .footer-stuff .icons i:nth-child(2) {
+              margin-left: .5rem;
+              margin-right: .5rem; }
+            .card footer .footer-card-2 .footer-stuff .icons i:nth-child(1) {
+              padding-right: .6rem;
+              padding-left: .6rem; }
+            .card footer .footer-card-2 .footer-stuff .icons i:hover {
+              background: #ebfbff;
+              color: #00252e;
+              border: 0.5px solid #ebfbff;
+              cursor: pointer; }
+        .card footer .footer-card-2 .footer-stuff p {
+          position: relative;
+          font-size: .8rem;
+          text-align: center; }
+          .card footer .footer-card-2 .footer-stuff p a {
+            text-decoration: none;
+            font-size: .8rem;
+            color: #ff52bf; }
+            .card footer .footer-card-2 .footer-stuff p a:hover {
+              color: green;
+              cursor: pointer; }
+
+@media only screen and (min-width: 800px) {
+  .card {
+    margin: auto;
+    display: grid;
+    grid-row-gap: 3rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "myHeader" "minicards" "myFooter"; }
+    .card header {
+      grid-area: myHeader;
+      background: url("/images/bg-hero-desktop.svg");
+      background-color: #ebfbff;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto;
+      grid-template-areas: "huddle-img btn" "huddle-msg content-img";
+      grid-row-gap: 1rem;
+      margin-top: 2%;
+      margin-left: 5%;
+      margin-right: 5%; }
+      .card header .huddle-img {
+        grid-area: huddle-img;
+        width: 50%;
+        margin-top: 1rem; }
+        .card header .huddle-img img {
+          width: 100%;
+          height: 100%; }
+      .card header .huddle-msg h1 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #00252e;
+        margin-bottom: -1rem; }
+      .card header .huddle-msg p {
+        color: #00252e;
+        text-align: left;
+        width: 80%; }
+      .card header .huddle-msg button {
+        background: #ff52bf;
+        color: #ebfbff;
+        font-weight: 400;
+        padding: 1rem 5rem;
+        border-radius: 1.5rem;
+        outline: none;
+        border: none; }
+        .card header .huddle-msg button:hover {
+          cursor: pointer;
+          color: #00252e;
+          border: 2px solid #00252e;
+          background: #ebfbff; }
+      .card header .btn {
+        grid-area: btn; }
+        .card header .btn button {
+          color: #00252e;
+          font-weight: 800;
+          padding: .7rem 5rem;
+          border-radius: 1.5rem;
+          outline: none;
+          border: none; }
+          .card header .btn button:hover {
+            cursor: pointer;
+            color: #ff52bf;
+            border: 2px solid #ff52bf;
+            background: #ebfbff; }
+      .card header .content-img {
+        margin-top: 1rem; }
+        .card header .content-img img {
+          width: 100%;
+          height: 100%; }
+    .card .minicards {
+      grid-area: minicards;
+      margin-left: 8%;
+      margin-right: 8%;
+      display: grid;
+      grid-row-gap: 1.5rem;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "minicard-1 minicard-1-img" "minicard-2-img minicard-2" "minicard-3 minicard-3-img"; }
+      .card .minicards p {
+        text-align: left; }
+      .card .minicards h2 {
+        text-align: left;
+        margin-left: 1.3rem; }
+      .card .minicards .minicard-1 {
+        grid-area: minicard-1;
+        margin-bottom: 0rem;
+        border-top-left-radius: .8rem;
+        border-bottom-right-radius: 0;
+        box-shadow: -9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-1 .minicard-1-msg {
+          margin: 20% 5%; }
+          .card .minicards .minicard-1 .minicard-1-msg h2 {
+            line-height: 1rem;
+            font-weight: 700; }
+          .card .minicards .minicard-1 .minicard-1-msg p {
+            color: #808d99;
+            font-weight: 400; }
+      .card .minicards .minicard-1-img {
+        grid-area: minicard-1-img;
+        border-bottom-right-radius: .8rem;
+        border-top-right-radius: .8rem;
+        border-top-left-radius: 0;
+        display: grid;
+        place-items: center;
+        box-shadow: 9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-1-img img {
+          width: 80%;
+          height: 80%; }
+      .card .minicards .minicard-2 {
+        grid-area: minicard-2;
+        border-top-right-radius: .8rem;
+        border-bottom-left-radius: 0;
+        margin-bottom: 0rem;
+        box-shadow: 9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-2 .minicard-2-msg {
+          margin: 20% 5%; }
+          .card .minicards .minicard-2 .minicard-2-msg h2 {
+            line-height: 1rem;
+            font-weight: 700; }
+          .card .minicards .minicard-2 .minicard-2-msg p {
+            color: #808d99;
+            font-weight: 400; }
+      .card .minicards .minicard-2-img {
+        grid-area: minicard-2-img;
+        border-bottom-left-radius: .8rem;
+        border-top-right-radius: 0;
+        display: grid;
+        place-items: center;
+        box-shadow: -9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-2-img img {
+          width: 80%;
+          height: 80%; }
+      .card .minicards .minicard-3 {
+        grid-area: minicard-3;
+        border-top-left-radius: .8rem;
+        border-bottom-right-radius: 0;
+        box-shadow: -9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-3 .minicard-3-msg {
+          margin: 20% 5%; }
+          .card .minicards .minicard-3 .minicard-3-msg h2 {
+            line-height: 1rem;
+            font-weight: 700; }
+          .card .minicards .minicard-3 .minicard-3-msg p {
+            color: #808d99;
+            font-weight: 400; }
+      .card .minicards .minicard-3-img {
+        grid-area: minicard-3-img;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: .8rem;
+        display: grid;
+        place-items: center;
+        box-shadow: 9px -2px 18px -13px rgba(0, 0, 0, 0.37); }
+        .card .minicards .minicard-3-img img {
+          width: 80%;
+          height: 80%; }
+    .card footer {
+      grid-area: myFooter;
+      position: relative;
+      margin-left: 5%;
+      margin-right: 5%; }
+      .card footer .footer-card-1 {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        border-radius: .8rem;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        display: grid;
+        place-items: center; }
+        .card footer .footer-card-1 h2 {
+          font-weight: 700;
+          text-align: center; }
+        .card footer .footer-card-1 button {
+          padding: 1rem 2.5rem;
+          background: #ff52bf;
+          color: #ebfbff;
+          font-weight: 400;
+          border-radius: 1.5rem;
+          width: 50%;
+          outline: none;
+          border: none;
+          margin-bottom: 5%; }
+          .card footer .footer-card-1 button:hover {
+            cursor: pointer;
+            color: #00252e;
+            border: 2px solid #00252e;
+            background: #fff; }
+      .card footer .footer-card-2 {
+        font-weight: 400;
+        background: #00252e;
+        position: relative;
+        margin-top: 6rem;
+        z-index: -1;
+        padding-top: 5rem;
+        padding-left: 4%;
+        padding-right: 4%;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: auto;
+        grid-template-areas: "footer-contact footer-about footer-stuff"; }
+        .card footer .footer-card-2 .footer-contact {
+          grid-area: footer-contact; }
+          .card footer .footer-card-2 .footer-contact .icon-location {
+            margin-top: 1rem;
+            color: #ebfbff;
+            display: flex; }
+            .card footer .footer-card-2 .footer-contact .icon-location div {
+              width: 20%; }
+              .card footer .footer-card-2 .footer-contact .icon-location div img {
+                margin-top: .3rem; }
+            .card footer .footer-card-2 .footer-contact .icon-location p {
+              height: 100%; }
+          .card footer .footer-card-2 .footer-contact .icon-phone {
+            color: #ebfbff; }
+            .card footer .footer-card-2 .footer-contact .icon-phone img {
+              float: left;
+              margin-right: .7rem; }
+          .card footer .footer-card-2 .footer-contact .icon-email {
+            color: #ebfbff; }
+            .card footer .footer-card-2 .footer-contact .icon-email img {
+              float: left;
+              margin-top: .3rem;
+              margin-right: .7rem; }
+        .card footer .footer-card-2 .footer-about {
+          grid-area: footer-about;
+          color: #ebfbff;
+          display: flex; }
+          .card footer .footer-card-2 .footer-about .list-1 {
+            width: 50%;
+            margin: auto;
+            line-height: 2rem;
+            list-style: none; }
+          .card footer .footer-card-2 .footer-about .list-2 {
+            width: 50%;
+            margin: auto;
+            line-height: 2rem;
+            list-style: none; }
+        .card footer .footer-card-2 .footer-stuff {
+          grid-area: footer-stuff;
+          position: relative; }
+          .card footer .footer-card-2 .footer-stuff .icons {
+            margin: 5rem auto 1rem;
+            display: flex; }
+            .card footer .footer-card-2 .footer-stuff .icons i {
+              border: 0.5px solid #ebfbff;
+              color: #ebfbff;
+              padding: .4rem;
+              border-radius: 50%; }
+              .card footer .footer-card-2 .footer-stuff .icons i:nth-child(2) {
+                margin-left: .5rem;
+                margin-right: .5rem; }
+              .card footer .footer-card-2 .footer-stuff .icons i:nth-child(1) {
+                padding-right: .5rem;
+                padding-left: .5rem; }
+              .card footer .footer-card-2 .footer-stuff .icons i:hover {
+                background: #ebfbff;
+                color: #00252e;
+                border: 0.5px solid #ebfbff;
+                cursor: pointer; }
+          .card footer .footer-card-2 .footer-stuff p {
+            position: relative;
+            top: 30%;
+            font-size: .7rem; }
+            .card footer .footer-card-2 .footer-stuff p a {
+              text-decoration: none;
+              font-size: .8rem; }
+              .card footer .footer-card-2 .footer-stuff p a:hover {
+                color: green;
+                cursor: pointer; } }
